@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onload/redirecting</title>
+    <script>
+        function waitfor_someseconds(){
+            setTimeout(handle_redirecting,3000);
+
+        }
+        function handle_redirecting(){
+            window.location="https://results.jntugvcev.edu.in/";
+        }
+    </script>
+</head>
+<body onload="waitfor_someseconds()">
+    <b>redirecting.......</b>
+    
+</body>
+</html>

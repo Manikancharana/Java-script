@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throw an exception</title>
+    <script>
+        function validateage(){
+            try{
+            var age=document.getElementById("age").value;
+           
+            if(age==""){
+                throw "Age can't be empty. ";
+            }
+            else if(age>=18){
+                throw "Right to vote.";
+            }
+            else if(age<18){
+                throw "To young to vote.";
+            }
+        }
+        catch(obj){
+            document.getElementById("errorinfo").innerHTML=obj;
+        }
+        finally{
+            document.getElementById("finallyinfo").innerHTML="Inside finally";
+
+        }
+    }
+    </script>
+</head>
+<body>
+  <input type="text" id="age" placeholder="Enter age ">
+    <input type="button" onclick="validateage()" value="validate"></input>
+    <p id="errorinfo"></p>
+    <p id="finallyinfo"></p>
+
+</body>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Validation with Exception</title>
+    <script>
+        function validateAge() {
+            try {
+                const ageInput = document.getElementById("age").value.trim();
+
+                if (ageInput === "") {
+                    throw new Error("Age cannot be empty.");
+                }
+
+                const age = parseInt(ageInput);
+
+                if (isNaN(age)) {
+                    throw new Error("Please enter a valid number.");
+                }
+
+                if (age < 0) {
+                    throw new Error("Age cannot be negative.");
+                } else if (age >= 18) {
+                    throw new Error("Eligible to vote.");
+                } else {
+                    throw new Error("Too young to vote.");
+                }
+
+            } catch (error) {
+                document.getElementById("errorinfo").innerText = error.message;
+            } finally {
+                document.getElementById("finallyinfo").innerText = "Validation complete.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Your Age</h2>
+    <input type="text" id="age" placeholder="Enter your age" />
+    <button onclick="validateAge()">Validate</button>
+
+    <p id="errorinfo" style="color: red;"></p>
+    <p id="finallyinfo" style="color: green;"></p>
+</body>
+</html>

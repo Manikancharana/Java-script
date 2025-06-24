@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Check</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Enter a number: "));
+
+        if (n <= 1) {
+            document.write(n + " is not a prime number");
+        } else {
+            var isPrime = true;
+            for (var i = 2; i <= Math.sqrt(n); i++) { // Check up to the square root of n
+                if (n % i == 0) {
+                    isPrime = false;
+                    break; // Exit loop early if a divisor is found
+                }
+            }
+
+            if (isPrime) {
+                document.write(n + " is a prime number");
+            } else {
+                document.write(n + " is not a prime number");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM :Event / Event listener</title>
+    <script>
+      function handlevent() {
+        document.getElementById("but1").addEventListener("click", handlebutton);
+      }
+
+      function handlebutton() {
+        alert("Loading......");
+      }
+      window.onload=handlevent; // window means browser
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Click me" id="but1" />
+  </body>
+</html>

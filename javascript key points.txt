@@ -1,0 +1,2 @@
+1)  .trim() is js built in model is used for remove white spaces form the characters
+2)  parseint() is converting the sting value to the integer value . the string value must be an integer

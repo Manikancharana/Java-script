@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom create and Remove node</title>
+    <script>
+        function handlecreate(){
+            let p=document.getElementById("d1");
+            let child=document.createElement("p"); //which type of element to create
+            let t=document.createTextNode("Aslo control's emotions");
+            child.append(t); 
+            p.append(child);
+        }
+        function handleremove(){
+            let p=document.getElementById("d1");
+            let c=document.getElementById("id2");
+            p.removeChild(c); //to remove using the function removeChild()
+        }
+
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <p id="id1">hello, Mani </p>
+        <p id="id2">Mani, you must learn how to control the patience</p>
+    </div>
+        <input type="button" value="Remove" onclick="handleremove()"> 
+       <input type="button" value="create" onclick="handlecreate()">  <!-- onclick the button exicute the function  -->
+  
+    
+</body>
+</html>
+
+

@@ -1,0 +1,35 @@
+ assignment
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom create and Remove node</title>
+    <script>
+        function handlecreate(){
+            let p=document.getElementById("d1");
+            let child=document.createElement("p");
+            let t=document.createTextNode("TV - 800$");
+            child.append(t); 
+            p.append(child);
+           
+        }
+        function handleremove(){
+            let p=document.getElementById("d1");
+            let c=document.getElementById("id2");
+            p.removeChild(c);
+        }
+function handleback(){
+    window.history.back();
+}
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <p id="id1">Laptop - 1000$</p>
+        <p id="id2">Cellphone - 300$</p>
+    </div>
+        <input type="button" value="Remove" onclick="handleremove()"> 
+       <input type="button" value="create" onclick="handlecreate()"> 
+       <input type="button" value="back" onclick="handleback()"> 
+    
+</body>
+</html>

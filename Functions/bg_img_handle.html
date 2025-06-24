@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>backgroundimage handle</title>
+    <script>
+        function bgimage_handle(x){
+            document.body.style.backgroundImage="url('"+x+"')";
+        }
+
+    </script>
+</head>
+<body>
+    <select onchange="bgimage_handle(this.value)";>
+        <option value="">Select a background image</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT991_uUDrE1ND0SJMa1ZO2YYBLxuExg_xOFA&s">over all team</option>
+        <option value="https://www.aljazeera.com/wp-content/uploads/2023/10/2023-10-14T125019Z_1915376356_UP1EJAE0ZNT6V_RTRMADP_3_CRICKET-WORLDCUP-IND-PAK-1697287859.jpg?resize=1800%2C1800">Virat</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzO-KaOeYxYubkuPW_DDmTiJoQk4gBHrG1sA&s">Rohit</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN6-eqEq5h502gqEkOJqYk0QWXWeoDLwSzPw&s">Bhumra</option>
+    </select>
+    
+</body>
+</html>

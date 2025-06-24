@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color handle</title>
+    <script>
+        function colorhandle(x){
+            document.bgColor=x;
+
+        }
+
+    </script>
+</head>
+<body>
+    <select onchange="colorhandle(this.value)";>
+        <option value="">Select a color</option>
+        <option value="skyblue">Skyblue</option>
+        <option value="red">Red</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+    
+</body>
+</html>

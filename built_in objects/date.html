@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <script>
+        function continuosdisplay(){
+            setInterval(displaydate,1000);
+        }
+        function displaydate(){
+            var d=new Date();
+            // var x= d.toLocaleTimeString();
+            // var x=d.toDateString();
+            var x = d.toLocaleString();
+            document.getElementById("dateinfo").innerHTML=x;
+        }
+        // var d=Date();
+        // document.write(d);
+        let digits=log10(n)+1;
+    </script>
+</head>
+<body onload="continuosdisplay()">
+    Current date :
+    <p id="dateinfo"></p>
+    
+</body>
+</html>

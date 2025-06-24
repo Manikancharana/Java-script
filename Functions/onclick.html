@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <script>
+        function calculate(a){
+             var x=parseInt(document.calsi.num1.value);
+             var y=parseInt(document.calsi.num2.value);
+             var z=document.calsi.res; 
+             if(a.value=="Add"){
+                z.value=x+y ;  
+             } 
+             else if(a.value=="sub"){
+                z.value=x-y ; 
+             }
+             else if(a.value=="mult"){
+                z.value=x*y ;  
+             }
+             else if(a.value=="div"){
+                z.value=x/y ;  
+             }
+             else{
+                z.value=x%y ;  
+             }
+             }
+
+    </script>
+</head>
+<body>
+    <form name="calsi">
+        Number1:<input type="text" name="num1"/><br>
+        Number2:<input type="text" name="num2"><br>
+        result:<input type="text" name="res"/><br>
+        <input type="button" name="button" value="Add" onclick="calculate(this)">
+        <input type="button" name="button" value="sub" onclick="calculate(this)">
+        <input type="button" name="button" value="mult" onclick="calculate(this)">
+        <input type="button" name="button" value="div" onclick="calculate(this)">
+        <input type="button" name="button" value="mod" onclick="calculate(this)">
+
+
+
+    </form>
+    
+</body>
+</html>

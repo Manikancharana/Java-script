@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <title>Onmouseover Onmouseout</title>
+</head>
+
+    <script>
+        function mouseover(x){
+            x.style.color="red";
+            x.style.backgroundColor = "skyblue";
+            x.innerHTML="MOUSEOVER";
+        }
+        function mouseout(y){
+            y.style.color="blue";
+            y.style.backgroundColor="pink";
+            y.innerHTML="MOUSEOUT";
+        }
+
+    </script>
+    
+    <body>
+        <p onmouseover="mouseover(this)" onmouseout="mouseout(this)">mouseover/mouseout</p>
+
+
+    </body>
+
+</html>
