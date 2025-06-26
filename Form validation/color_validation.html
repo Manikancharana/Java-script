@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Color Validation</title>
+  <script>
+    function color_validation(event) {
+      let c = document.col.color.value;
+      if (c === "") {
+        alert("Select any color");
+        event.preventDefault(); // Stop form from submitting
+      } else {
+        alert("Validation successful");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>Pick a Color</h3>
+  <form name="col" onsubmit="color_validation(event)">
+    <select name="color">
+      <option value="">Select a Color</option>
+      <option value="yellow">Yellow</option>
+      <option value="skyblue">Sky Blue</option>
+      <option value="red">Red</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>

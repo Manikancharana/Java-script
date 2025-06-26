@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Regular expression</title>
+    <script>
+        function validate(){
+        let input=document.reg.name.value;
+        let exp = /^[A-Za-z]+$/;
+        let res=exp.test(input);
+        if(res){
+            alert("validation successful");
+        }
+        else{
+            alert("Enter the valid expression");
+            // document.reg.name.focus();
+            return false;
+        }
+        }
+    </script>
+</head>
+<body>
+    
+    <h2>Registration Form</h2>
+    <form name="reg" action="mani.php" onsubmit="return validate()">
+        User Name : <input type="text" name="name" >
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

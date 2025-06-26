@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Regular expression address validation</title>
+    <script>
+        function validate(){
+        let input=document.reg.add.value;
+        let exp = /^[A-Za-z0-9\s]{3,10}$/; //let exp=/^[A-Za-z0-9\s]+$/   ,,, "\s" is used to blackspaces and also {3,10} are no of characters min(3) max(10)
+        let res=exp.test(input);
+        if(res){
+            alert("validation successful");
+        }
+        else{
+            document.getElementById("err").innerHTML="Please enter the alpha numeric values only ";
+            document.reg.name.focus();
+            return false;
+        }
+        }
+    </script>
+</head>
+<body>
+    
+    <h2>Registration Form</h2>
+    <form name="reg" action="mani.php" onsubmit="return validate()">
+        Address : <textarea name="add" ></textarea>
+       <b id="err"></b>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

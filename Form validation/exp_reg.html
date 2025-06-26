@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration Form Validation</title>
+    <script>
+      function validate() {
+        // Get values from form inputs
+        let email = document.forms["reg"]["email"].value;
+        let password = document.forms["reg"]["password"].value;
+        let ph = document.forms["reg"]["num"].value;
+
+        // Email validation
+        if (email == "") {
+          alert("Email is mandatory");
+          document.forms["reg"]["email"].focus();
+          return false;
+        }
+
+        let mailExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!mailExp.test(email)) {
+          alert("Enter a valid email");
+          document.forms["reg"]["email"].focus();
+          return false;
+        }
+
+        // Password validation
+        if (password == "") {
+          alert("Password is mandatory");
+          document.forms["reg"]["password"].focus();
+          return false;
+        }
+
+        // Phone number validation
+        if (ph == "") {
+          alert("Phone number is mandatory");
+          document.forms["reg"]["num"].focus();
+          return false;
+        }
+
+        alert("Validation successful");
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form name="reg" onsubmit="return validate()">
+      E-mail: <input type="text" name="email" /><br><br>
+      Password: <input type="password" name="password" /><br><br>
+      Phone No: <input type="number" name="num" /><br><br>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

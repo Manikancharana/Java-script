@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>checkboxes and radio buttons</title>
+    <script>
+
+            function formvalidation() {
+              let valid=false;
+              let a= document.getElementsByName("c");
+             for(let i=0;i<a.length;i++){
+                if(a[i].checked){
+              valid=true;
+              break;
+      }       
+    }
+    if(valid){
+        alert("Validation successfully");
+    }
+    else{
+        alert("please select any one them");
+    }
+
+              }
+    </script>
+  </head>
+  <body>
+    <form name="validate" action="checkbox.php" onsubmit=" return formvalidation()" >
+      <input type="checkbox" name="c" value="js" />Javascript
+      <input type="checkbox" name="c" value="jquery" />jquery
+      <input type="checkbox" name="c" value="react" />react
+      <input type="checkbox" name="c" value="angular" />angular <br />
+      <br />
+      <input type="radio" name="c" value="IT Software" />IT Software
+      <input type="radio" name="c" value="Non IT" />Non IT
+      <br />
+      <br />
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
