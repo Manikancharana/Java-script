@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Singlton object creation</title>
+    <script>
+        let blogpost = new function(){
+            this.tittle ="Ruby on rails";
+            this.text="Rapid Web development";
+            this.displaydetails=function(){
+                document.write(this.tittle);
+            }
+        }
+        blogpost.displaydetails();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

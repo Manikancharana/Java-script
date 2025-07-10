@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arrow function</title>
+    <script>
+      //functions are constants so declare functions using const
+      const test = () => document.write("Hello world!..."); //single line function
+      test();
+
+      const sub = (n1, n2) => n1 - n2 + 50; //single line fun don't use any { }
+      let subt = sub(50, 25);
+      document.write("<br> single line function ", subt + "<br>");
+
+      const add = (num1, num2) => {
+        //arrow function multi line function
+        let sum = num1 + num2;
+        document.write("sum of two numbers : " + sum);
+      };
+      let num1 = Number(prompt("Enter a numer "));
+      let num2 = Number(prompt("Enter another number "));
+      add(num1, num2);
+    </script>
+  </head>
+  <body></body>
+</html>

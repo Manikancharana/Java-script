@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Object creating using functions </title>
+    <script>
+        function animal(tittle,text){
+            this.tittle=tittle;
+            this.text=text;
+            this.addcategory=addcategory;
+            // this.display=display;
+
+        }
+        function addcategory(category){
+            this.category=category;
+
+        }
+        // function display(){
+        //     document.write(this.tittle+"<br>");
+        // document.write(this.text)
+        // document.write(this.category+"<br>")
+        // }
+
+        let obj=new animal("Lion","King of forest");
+        obj.addcategory(" and 1000 pounds punch ");
+        document.write(obj.tittle+"<br>");
+        document.write(obj.text)
+        document.write(obj.category+"<br>")
+        // obj.display();
+       
+
+        let obj1=new animal("chirutha","  Fastest running animal");  // multiple objects 
+        obj1.addcategory("400km per hour")
+        document.write(obj1.tittle);
+        document.write(obj1.text);
+        document.write(obj1.category);
+        // obj1.display();
+    </script>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Object creating using functions </title>
+    <script>
+        function animal(tittle,text){               // multiple object diplay in simple
+            this.tittle=tittle;
+            this.text=text;
+            this.addcategory=addcategory;
+            this.display=display;
+
+        }
+        function addcategory(category){
+            this.category=category;
+
+        }
+        function display(){
+        document.write(this.tittle+"<br>");
+        document.write(this.text)
+        document.write(this.category+"<br>")
+        }
+
+        let obj=new animal("Lion","King of forest");
+        obj.addcategory(" and 1000 pounds punch ");
+        obj.display();
+       
+
+        let obj1=new animal("chirutha","  Fastest running animal");  // multiple objects 
+        obj1.addcategory("400km per hour")
+        obj1.display();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+

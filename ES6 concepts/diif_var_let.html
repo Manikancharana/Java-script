@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Demo</title>
+    <script>
+      function fun() {
+        var a = 10;
+        if (a != 0) {
+          var b = 10; //var is function scoped and let is block scoped i.e { } in between only
+          document.write("it's a number <br>");
+        }
+        document.write("Add of two numbers is: ", a + b);
+      }
+      fun();
+    </script>
+  </head>
+  <body></body>
+</html>
