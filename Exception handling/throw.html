@@ -49,7 +49,7 @@
     <script>
         function validateAge() {
             try {
-                const ageInput = document.getElementById("age").value.trim();
+                const ageInput = document.getElementById("age").value.trim();  // .trim() used to remove the white spaces start and end part of the stirng
 
                 if (ageInput === "") {
                     throw new Error("Age cannot be empty.");

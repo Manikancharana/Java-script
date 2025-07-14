@@ -12,7 +12,8 @@
         }
         else{
             document.getElementById("err").innerHTML="Please enter the alpha numeric values only ";
-            document.reg.name.focus();
+            // document.reg.name.focus();
+            confirm("Enter alphabet only ")
             return false;
         }
         }
@@ -21,10 +22,11 @@
 <body>
     
     <h2>Registration Form</h2>
-    <form name="reg" action="mani.php" onsubmit="return validate()">
+    <form name="reg"  onsubmit="return validate()">
         Address : <textarea name="add" ></textarea>
+         <input type="submit" value="submit">
        <b id="err"></b>
-        <input type="submit" value="submit">
+       
     </form>
 </body>
 </html>

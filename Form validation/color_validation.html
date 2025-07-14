@@ -9,7 +9,9 @@
         alert("Select any color");
         event.preventDefault(); // Stop form from submitting
       } else {
+        document.body.style.backgroundColor = c;
         alert("Validation successful");
+        event.preventDefault();
       }
     }
   </script>
@@ -20,6 +22,8 @@
     <select name="color">
       <option value="">Select a Color</option>
       <option value="yellow">Yellow</option>
+      <option value="white">white</option>
+      <option value="black">black</option>
       <option value="skyblue">Sky Blue</option>
       <option value="red">Red</option>
     </select>
