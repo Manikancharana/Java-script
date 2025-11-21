@@ -28,31 +28,36 @@
 </body>
 </html> -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
 </head>
 <body>
     <script>
-    var n= parseInt(prompt("Enter a number"))
-      if(n<=1) document.write(n+" is not a prime number")
-      else{
-         var isprime=true;
-      for(let i=2;i<Math.sqrt(n);i++){
-        if(n%i==0){
-
-     isprime=false;
-        break;
+        var n = alert(prompt("Enter a number "))
+        var isprime=true
+        if(n<=1){
+            document.write(n+" is not a prime number ")
         }
-      }
-    }
-     if(isprime) {
-        document.write("It's not a prime number")}
-
-     else {
-        document.write("It's a prime number")
-     }
+        else{
+            for(let i=2;i<Math.sqrt(n);i++){
+                if(n%i==0){
+                    isprime=false
+                    break
+                }
+            }
+        }
+   if(isprime){
+    document.write(n + " is a prime number")
+   }
+   else{
+    document.write(n+" is not a prime number ")
+   }
     </script>
 </body>
 </html>
